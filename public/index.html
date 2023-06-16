@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeSearch by keneric.dev</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/logo_pokesearch.png">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="head-logo">
+                <img src="assets/images/pokeSearchLogo.png" alt="pokeSearchLogo">
+            </div>
+            <div class="head-links">
+                <div class="link-active">
+                    <a href="">Search</a>
+                    <span class="link-active-line"></span>
+                </div>
+                <div>
+                    <a target="_blank" href="https://pokeapi.co/">PokeAPI</a>
+                </div>
+                <div>
+                    <a target="_blank" href="https://keneric-dev.web.app/">AboutMe</a>
+                </div>
+                <div>
+                    <a target="_blank" href="https://watch.pokemon.com/es-xl/">TV Pokemon</a>
+                </div>
+            </div>
+            <div class="head-button">
+                <a target="_blank" href="" class="btn-git">
+                    <img src="assets/icons/github.svg" alt="gitHub_icon">
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-general">
+        <div class="sections" id="sections">
+            <div class="section-one">
+                <div class="content">
+
+                    <div class="titles-section">
+                        <span class="title">Welcome</span>
+                        <img src="assets/images/mano.png" class="hand-greet" alt="img_mano">
+                        <p>In this PokeSearch you can find the evolution, abilities, wight, height of each pokemon.
+                            <br>Search by its <span class="bold-blue">types</span> and <span
+                                class="bold-red">name</span>
+                        </p>
+                    </div>
+
+                    <div class="search-section" id="searchCard">
+                        <img src="assets/icons/pokeball.png" class="pokeball-icon" alt="pokeball_icon">
+
+                        <div class="head-search">
+                            <div class="input-section">
+                                <div class="simple-spinner"><span></span></div>
+                                <img src="assets/icons/search.svg" class="search_icon" alt="search_icon">
+                                <input type="text" id="name_pokemon" placeholder="Name of Pokemon">
+                            </div>
+                            <div class="keyS-section">
+                                <img src="assets/icons/keyS.png" class="keyS-icon" alt="keyS_icon">
+                                <span class="keyS-descrip">quick access</span>
+                            </div>
+
+                            <div class="actions-section active">
+                                <button class="filters-btn">
+                                    <span>Filters</span>
+                                    <div class="triangule"></div>
+                               </button>
+                            <button class="clear-btn">
+                                <span>Clear</span>
+                           </button>
+                            </div>
+                        </div>
+
+                        <div class="body-search">
+                            <div class="section-tabs">
+                                <!--LIST OF POKEMONS TYPES-->
+                                <div class="tab-container" id="typesPokemon"></div>
+                                <!--LIST OF POKEMONS-->
+                                <div class="tab-content-container">
+                                    <div id="tabAll" class="tab-content active"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="select-filters">
+
+                                <div class="options-filters">
+                                    <div class="line-filter"></div>
+                                    <div class="cards-option">
+                                    
+                                    <div class="cards-option-btns">
+                                        <div class="btns-options opt-types" id="opt-types">
+                                            <i class="fas fa-check checkmark"></i>
+                                            <span class="name-btn">Types</span>
+                                        </div>
+                                        <div class="btns-options opt-ability" id="opt-ability"> 
+                                            <i class="fas fa-check checkmark"></i>
+                                            <span class="name-btn">Abilities</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    
+
+                                </div> 
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-two">
+                <img src="assets/images/ilustrationPokemon.png" alt="ilustrationPokemon.png">
+            </div>
+        </div>
+    </div>
+    
+    <div class="section-information-pokemon" style="display: none;">
+        <div class="card-info-one">
+
+            <div class="info-general-pokemon">
+                <div class="info-gen-1">
+                    <div class="info-color-pokemon"></div>
+                    <div class="info-name-pokemon">Name-pokemon</div>
+                </div>
+                <div class="info-gen-2">
+                    <span class="info-id-pokemon">#000</span>
+                </div> 
+            </div>
+
+            <div class="info-aditional-pokemon">
+                <div class="info-adit-1">
+                    <div class="info-types-pokemon">
+                    </div>
+                </div>
+                
+                <div class="info-adit-2">
+                    <div class="info-weight-pokemon"><div class="weight-num">69 kg</div><div class="weight-title">WEIGHT</div></div>
+                    <div class="line-divider"></div>
+                    <div class="info-height-pokemon"><div class="height-num">7 m</div><div class="height-title">HEIGHT</div></div>
+                </div>
+            </div>
+
+            <div class="info-sprites-pokemon">
+                <div class="titles-generals">Sprites</div>
+                <div class="gallery-sprites"></div>
+            </div>
+        </div>
+        <div class="card-info-two">
+
+            <div class="cards-info">
+                <div class="titles-generals">Abilities</div>
+                <div class="content-info">
+                    <div id="list-abilities"></div>
+                </div>
+                            
+            </div>
+
+            <div class="cards-info">
+                <div class="titles-generals">Evolution chain</div>
+                <div class="content-info">
+                <div id="list-evolution-chain"></div>
+            </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="loading off">
+        <div class="circle-lines">
+            <div class="circle-plane">
+                <img src="assets/icons/pokeball.png" alt="pokeball.png">
+            </div>
+        </div>
+        <span>Loading...</span>
+    </div>
+
+    <footer>
+        <span>©2023 Copyright: <a target="_blank" href="https://keneric-dev.web.app/"><strong
+                    class="my_page">keneri©.dev</strong></a></span>
+    </footer>
+
+</body>
+<script src="app.js"></script>
+
+</html>
